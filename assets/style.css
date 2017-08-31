@@ -58,7 +58,7 @@ h2, h3 {
 #logo {
 	background: #4aaaa5;
 	font-family: 'Georgia', Times, Times New Roman, serif;
-	font-weight: 700;
+	font-weight: bold;
 	font-size: 30px;
 	line-height: 90px;
 	text-decoration: none;
@@ -246,73 +246,110 @@ input[type=submit] {
 
 /*Media Queries*/
 
-@media screen and (max-width: 980px) {
-	#header {
-		width: 100%;
-		overflow: none;
+@media only screen and (max-width: 980px) {
+	.container {
+		max-width: 768px;
+		padding: 0 20px;
 	}
-}
 
-@media screen and (max-width: 768px) {
-	
+	.main-section,
+	.portfolio-section {
+		max-width: 420px;
+	}
+
+	.work, #header {
+		width: 100%;
+	}
+
 	nav {
 		float: left;
-	}
-
-	.main-section {
-		max-width: 100%;
-		
+		margin-left: 60px;
 	}
 
 	.sidebar {
-		max-width: 100%;
-		left: 0;
+		float: left;
+		margin-left: -70px;
 	}
+}
+	
 
+@media only screen and (max-width: 768px) {
+	.main-section,
+	.sidebar,
 	.portfolio-section {
 		max-width: 100%;
 	}
 
-	.work, h3, img {
-		
+	#main-container {
+		overflow: auto;
 	}
 
+	nav a {
+		left: 40%;
+	}
+
+	.work, h3 {
+    /* Box-model */
+    width: 47%;
+
+    /* Positioning */
+    margin-bottom: 10px;
+  }
+
+  .work:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .work:nth-child(odd) {
+    float: right;
+  }
+
+  .auth-image {
+    width: 50%;
+  }
+
+  .sidebar {
+    margin-bottom: 40px;
+    margin-left: -105px;
+  }
+	
 }
 
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
 	#header {
 		position: static;
 	}
 
-	#logo {
+	nav {
 		width: 100%;
-		font-size: 40px;
+		margin: 15px 0;
+		text-align: center;
 	}
+
 	nav a {
-		margin-bottom: 30px;
-		margin-left: 20px;
-		margin-right: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
-		left: 90px;
-		font-size: 20px;
+		width: 30%;
+		padding-left: 0;
+		margin-left: 0;
+		left: 0%;
 	}
 
 	#main-container {
-		padding: 20px;
-		margin-top: -30px;
+		padding: 10px;
+		padding-top: 0;
 	}
 
 	.container {
 		padding: 0;
 	}
 
-	.work, h3, img {
+	.work, img, #logo {
 		width: 100%;
 	}
 
-	h3 {
-		font-size: 30px;
+	.sidebar {
+		left: 105px;
 	}
+
+	
 
 }
